@@ -1,0 +1,474 @@
+/*
+
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+---------------------------------------------
+Table of contents
+------------------------------------------------
+1. Typography
+2. General
+3. Nav
+4. Hero Carousel
+5. Accordion
+6. Shop
+7. Product
+8. Carousel Hero
+9. Carousel Brand
+10. Services
+11. Contact map
+12. Footer
+13. Small devices (landscape phones, 576px and up)
+14. Medium devices (tablets, 768px and up)
+15. Large devices (desktops, 992px and up)
+16. Extra large devices (large desktops, 1200px and up)
+--------------------------------------------- */
+
+
+
+
+/* Typography */
+body, ul, li, p, a, label, input, div {
+  font-family: 'Footlight mt light', sans-serif;
+  font-size: 21px !important;
+  font-weight: 300 !important;
+}
+.h1 {
+  font-family: 'Bernard mt condensed', sans-serif;
+  font-size: 60px !important;
+  font-weight: 200 !important;
+
+}
+.h2 {
+  font-family: 'Footlight mt light', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+}
+.h3 {
+  font-family: 'Footlight mt light', sans-serif;
+  font-size: 22px !important;
+}
+
+.image-link {
+    position: relative;
+    display: inline-block;
+}
+
+.image-with-shadow {
+    transition: transform 0.3s;
+}
+
+.image-link:hover .image-with-shadow {
+    transform: translateY(-5px); /* Adjust the shadow distance */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adjust the shadow color and size */
+}
+
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.carousel {
+    height: 110vh;
+}
+
+.container, .row, .col-lg-6 {
+    height: 100%;
+}
+.product-title-link {
+    position: relative;
+    display: inline-block;
+}
+
+.shadow-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the shadow */
+    background-color: white; /* Adjust the color of the shadow */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.product-title-link:hover .shadow-effect {
+    transform: scaleX(1);
+}
+.scroll-pop {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-pop.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* General */
+.logo { font-weight: 500 !important;}
+.text-muted { color: #fff !important;}
+.text-success { color: #000 !important;}
+.text-light { color: #cfd6e1 !important;}
+.bg-dark { background-color: #212934 !important;}
+.bg-light { background-color: #e9eef5 !important;}
+.bg-black { background-color: #fff !important;}
+
+.btn-success {
+  background-color:  !important;
+  border-color: #56ae6c !important;
+}
+.pagination .page-link:hover {color: #000;}
+.pagination .page-link:hover, .pagination .page-link.active {
+  background-color: #fff ;
+  color: #fff;
+}
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color:                #FFFFFF;
+  --primary-color:              #FF4400;
+  --section-bg-color:           #f0f8ff;
+  --dark-color:                 #000000;
+  --grey-color:                 #d0d1d1;
+  --p-color:                    #717275;
+
+  --body-font-family:           '', sans-serif;
+
+  --h5-font-size:               24px;
+  --p-font-size:                20px;
+  --copyright-text-font-size:   16px;
+  --product-link-font-size:     14px;
+  --custom-link-font-size:      12px;
+
+  --font-weight-thin:           100;
+  --font-weight-light:          300;
+  --font-weight-normal:         400;
+  --font-weight-bold:           700;
+  --font-weight-black:          900;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+    background: var(--white-color);
+    font-family: var(--body-font-family);    
+    position: relative;
+}
+
+
+/*---------------------------------------
+  SECTION               
+-----------------------------------------*/
+section {
+
+}
+
+.section-padding {
+  padding-top: 1rem;
+  padding-bottom: 7rem;
+}
+
+.featured {
+  background: var(--section-bg-color);
+}
+ PRODUCT               
+-----------------------------------------*/
+.front-product {
+  background: var(--section-bg-color);
+}
+
+.product-thumb {
+  background: var(--white-color);
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+
+.product-image {
+  transition: all 0.5s ease-out;
+}
+
+.product-thumb:hover .product-image {
+  box-shadow: 0 1rem 3rem rgba(147,146,146);
+}
+
+.product-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 20px;
+}
+
+.product-info {
+  padding: 30px 20px;
+}
+
+.product-description,
+.product-cart-thumb {
+  padding: 0 20px;
+}
+
+.product-icon {
+  color: var(--white-color);
+}
+
+.product-title-link {
+  color: var(--dark-color);
+}
+
+.product-additional-link {
+  display: inline-block;
+  vertical-align: top;
+  font-size: var(--product-link-font-size);
+  margin-top: 32px;
+  margin-right: 12px;
+}
+
+.product-alert {
+  background: var(--white-color);
+  color: var(--p-color);
+  font-size: var(--custom-link-font-size);
+  font-weight: var(--font-weight-bold);
+  padding: 3px 10px;
+}
+
+.product-p {
+  font-size: var(--product-link-font-size);
+}
+
+.view-all {
+  text-transform: uppercase;
+  color: var(--p-color);
+  font-size: 13px;
+  font-weight: var(--font-weight-bold);
+  border-bottom: 2px solid var(--grey-color);
+  padding-bottom: 6px;
+}
+/* General contact*/
+.logo { font-weight: 500 !important;}
+.text-muted { color: #fff !important;}
+.text-success { color: #000 !important;}
+.text-light { color: #ffffff !important;}
+.text-center { color: #ffffff !important;}
+.bg-dark { background-color: #212934 !important;}
+.bg-light { background-color: #000000 !important;}
+.bg-black { background-color: #1d242d !important;}
+.bg-success { background-color: #000000 !important;}
+.btn-success {
+  background-color: #999999ff!important;
+  border-color: #999999ff !important;
+}
+/* Nav */
+#templatemo_nav_top { min-height: 40px;}
+#templatemo_nav_top * { font-size: .9em !important;}
+#templatemo_main_nav a { color: #212934;}
+#templatemo_main_nav a:hover { color: #999999ff;}
+#templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
+
+/* Hero Carousel */
+#template-mo-zay-hero-carousel { background: #000 !important;}
+/* Accordion */
+.templatemo-accordion a { color: #000;}
+.templatemo-accordion a:hover { color: #333d4a;}
+
+
+
+.card.product-wap .card .product-overlay {
+  background: rgba(0,0,0,.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+.card.product-wap:hover .card .product-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.card.product-wap a { color: #000;}
+#carousel-related-product .slick-slide:focus { outline: none !important;}
+#carousel-related-product .slick-dots li button:before {
+  font-size: 15px;
+  margin-top: 20px;
+}
+ RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 62px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 42px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 24px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin-top: 1rem;
+  }
+
+  .site-header {
+    background-position: bottom;
+  }
+
+  #cart-modal .modal-header .btn-close {
+    margin: 22px 14px;
+  }
+
+  .custom-btn {
+    font-size: 14px;
+    padding: 13.5px 20px;
+  }
+
+  .slick-slideshow .custom-btn {
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+
+  .social-login,
+  .div-separator {
+    width: 75% !important;
+  }
+
+  #cart-modal .modal-footer .row {
+    width: 100% !important;
+  }
+
+  .site-header.section-padding,
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .site-header-image.section-padding {
+    padding-bottom: 0;
+  }
+
+  .header-info {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .header-image {
+    position: relative;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .slick-testimonial-caption {
+    padding: 6rem 3rem 4rem 3rem;
+  }
+
+  .slick-slideshow .slick-dots li {
+    width: 25px;
+    height: 25px;
+  }
+
+  .modal-header {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+
+  .modal-body {
+    padding: 2rem;
+  }
+
+  #cart-modal .modal-footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #cart-modal .modal-body {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+
+  .full-image-img {
+    bottom: 0;
+  }
+}
+
+
+
+/* Carousel Hero */
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #000;
+}
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #fff !important;
+  font-size: 2.8em !important;
+}
+/* Carousel Brand */
+.tempaltemo-carousel .h1 {
+  font-size: .5em !important;
+  color: #000 !important;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+*/
+/* Small devices (landscape phones, 576px and up)*/
+.product-wap .h3, .product-wap li, .product-wap i, .product-wap p {
+  font-size: 12px !important;
+}
+.product-wap .product-color-dot {
+  width: 6px;
+  height: 6px;
+}
+
+@media (min-width: 576px) {
+  .tempaltemo-carousel .h1 { font-size: 1em !important;}
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  #templatemo_main_nav .navbar-nav {max-width: 450px;}
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  #templatemo_main_nav .navbar-nav {max-width: 550px;}
+  #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
+  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+  .product-wap .product-color-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
